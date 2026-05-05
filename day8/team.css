@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Playfair Display', sans-serif;
+}
+
+.team-hero {
+  height: 80vh; /* reduce height to avoid zoom feeling */
+
+  background: url("./Assest/title-area-team.jpg");
+  background-size: cover;              /* keeps aspect ratio */
+  background-position: center;         /* centers image */
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
+
+.team-hero h1 {
+  font-size: 50px;
+  font-weight: 400;
+}
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: transparent;
+}
+
+
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    color: pink;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+
+}
+
+.nav-links a:hover {
+    color: pink;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #f3d1dc;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.history {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 80px 100px;
+    background: #f3d4de5f;
+}
+
+/* LEFT TEXT */
+.history-text {
+    width: 50%;
+     text-align: center;
+}
+
+.history-text h1 {
+    font-size: 60px;
+    font-weight: 400;
+    color: #333;
+}
+
+.history-text h1 span {
+    font-style: italic;
+    font-weight: 600;
+}
+
+.history-text p {
+    margin: 20px 0;
+    color: #555;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.history-text button {
+    padding: 12px 30px;
+    border: 1px solid #333;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* RIGHT IMAGE */
+.history-img {
+    width: 40%;
+}
+
+.history-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    
+}
+/* SECTION */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 80px 100px;
+    background: #f3f0f0;
+    gap: 60px;
+}
+
+/* IMAGE */
+.about-image {
+    width: 45%;
+}
+
+.about-image img {
+    width: 100%;
+    display: block;
+    border: 12px solid #eee;
+}
+
+/* TEXT */
+.about-content {
+    width: 45%;
+    text-align: center;
+}
+
+.about-content h1 {
+    font-size: 60px;
+    font-weight: 400;
+    color: #333;
+}
+
+.about-content h1 span {
+    font-style: italic;
+    font-weight: 600;
+}
+
+.about-content p {
+    margin: 20px auto;
+    max-width: 500px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.about-content button {
+    padding: 12px 30px;
+    background: transparent;
+    cursor: pointer;
+}
+button:hover{
+    color: white;
+    background-color: #333;
+}
+/* FOOTER BACKGROUND */
+.footer {
+    height: 500px;
+
+    background: 
+       
+        url("footer-img.jpg") center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+/* CONTENT */
+.footer-content h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* SOCIAL ICONS */
+.socials {
+    margin-top: 20px;
+}
+
+.socials a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+
+    margin: 0 8px;
+
+    border-radius: 50%;
+    background: #f5dede; 
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}

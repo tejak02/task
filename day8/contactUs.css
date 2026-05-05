@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Playfair Display', sans-serif;
+  
+}
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: transparent;
+     z-index: 10; 
+}
+
+
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    color: pink;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+
+}
+
+.nav-links a:hover {
+    color: pink;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #f3d1dc;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+/* ===== MAP SECTION ===== */
+.contact-map-section {
+    position: relative;
+    height: 80vh;
+   overflow: visible; /* IMPORTANT */
+}
+
+/* MAP */
+.map-iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* DARK OVERLAY */
+.map-overlay-dark {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+/* CONTACT CARD */
+.contact-container {
+    position: absolute;
+    left: 50%;
+    bottom: -100px;  
+    transform: translateX(-50%);
+    z-index: 3;
+
+    width: 70%;
+    max-width: 1100px;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 60px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+.after-map-space {
+    height: 200px; /* space for card to sit */
+    background: #f5f5f5;
+}
+
+/* LEFT FORM */
+.contact-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+     
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: none;
+    border-bottom: 1px solid #aaa;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+}
+
+.contact-form textarea {
+    height: 80px;
+    resize: none;
+}
+
+/* BUTTON */
+.contact-form button {
+    width: 120px;
+    padding: 10px;
+    border: 1px solid black;
+    background: transparent;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: black;
+    color: white;
+}
+
+/* RIGHT INFO */
+.contact-info {
+    width: 45%;
+     text-align: center;
+}
+
+.contact-info h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-info span {
+    font-style: italic;
+}
+
+.contact-info p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+.choco-section {
+    background: #f5f5f5;
+    padding: 180px 0 120px;  /* 🔥 pushes it down below the card */
+    text-align: center;
+}
+
+.choco-section img {
+    max-width: 500px;   /* control size */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;     /* center image */
+}
+/* FOOTER BACKGROUND */
+.footer {
+    height: 500px;
+
+    background: 
+       
+        url("footer-img.jpg") center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+/* CONTENT */
+.footer-content h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* SOCIAL ICONS */
+.socials {
+    margin-top: 20px;
+}
+
+.socials a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+
+    margin: 0 8px;
+
+    border-radius: 50%;
+    background: #f5dede; 
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}

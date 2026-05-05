@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        color: white;
+    }
+
+    
+    .hero {
+        height: 100vh;
+        background: url("./slider-background.jpg") no-repeat center/cover;
+    }
+
+   
+    .navbar {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding: 20px 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        background: transparent;
+    }
+
+
+
+    .logo {
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 40px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        letter-spacing: 3px;
+        position: relative;
+    }
+
+   
+    .nav-links a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background: rgb(255, 0, 0);
+        color: pink;
+        left: 0;
+        bottom: -5px;
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover::after {
+        width: 100%;
+        
+    }
+    .nav-links a:hover{
+        color: pink;
+    }
+
+
+    
+</style>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="./logo.png" alt="Bridge">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">TEAM</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+
+        <div class="social-icons">
+            
+        </div>
+    </header>
+
+    <section class="hero">
+        <img src="./slider-graphic-3.png" alt="">
+    </section>
+
+</body>
+
+</html>

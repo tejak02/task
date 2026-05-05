@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Playfair Display', sans-serif;
+}
+
+.team-hero {
+  height: 80vh; /* reduce height to avoid zoom feeling */
+
+  background: url("./Assest/title-area-team.jpg");
+  background-size: cover;              /* keeps aspect ratio */
+  background-position: center;         /* centers image */
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
+
+.team-hero h1 {
+  font-size: 50px;
+  font-weight: 400;
+}
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: transparent;
+}
+
+
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    color: pink;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+
+}
+
+.nav-links a:hover {
+    color: pink;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #f3d1dc;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.sec {
+    height: 100vh;
+    background: url(./h1-img-2.jpg)no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+     text-align: center;
+}
+
+/* LEFT IMAGE */
+.left img {
+    width: 400px;
+   
+}
+
+/* RIGHT TEXT */
+.right {
+    max-width: 400px;
+    color: #222;
+    justify-content: center;
+    align-items: center;
+}
+
+.right h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.right p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+button {
+    padding: 10px 30px;
+    background: transparent;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.cards {
+    display: flex;
+    gap: 30px;
+    height: 100vh;
+    background: rgb(255, 255, 255);
+}
+
+/* EACH CARD */
+.card {
+    flex: 1;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+/* BACKGROUND IMAGES */
+.card1 {
+    background-image: url("banner-1.jpg");
+}
+
+.card2 {
+    background-image: url("banner-2.jpg");
+}
+
+.card3 {
+    background-image: url("banner-3.jpg");
+}
+
+/* TEXT ON CENTER CARD */
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    color: white;
+
+}
+.card h2 {
+  font-size: 32px;
+  text-align: center;
+  z-index: 1;
+}
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+
+    opacity: 0;              /* hidden initially */
+    transition: 0.4s;
+}
+.card:hover::before {
+    opacity: 1;
+}
+.card h2 {
+    font-size: 32px;
+    text-align: center;
+    z-index: 1;
+
+    opacity: 0;              /* hidden first */
+    transform: translatez(20px);
+    transition: 0.4s;
+}
+.card:hover h2 {
+    opacity: 1;
+    transform: translateY(0);
+}
+.card {
+    overflow: hidden;
+}
+
+.card:hover {
+   
+    transition: 0.4s;
+}
+.review {
+  min-height: 60vh; /* increase height */
+ 
+
+  background-image: url("./Assest/testimonials-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%; /* slightly smaller + elegant */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+}
+.rate {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  
+}
+.rate h1{
+    color: rgb(0, 0, 0);
+    font-size: 48px;
+    font-family: "Playfair Display", serif;
+}
+.rate h1 span{
+     font-style: italic;
+}
+.rate p {
+  color: #777;
+  margin-top: 25px;
+  line-height: 1.7;
+  font-size: 16px;
+}
+.rate h4 {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+}
+/* FOOTER BACKGROUND */
+.footer {
+    height: 500px;
+
+    background: 
+       
+        url("footer-img.jpg") center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+/* CONTENT */
+.footer-content h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* SOCIAL ICONS */
+.socials {
+    margin-top: 20px;
+}
+
+.socials a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+
+    margin: 0 8px;
+
+    border-radius: 50%;
+    background: #f5dede; 
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
