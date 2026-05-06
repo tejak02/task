@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -55,6 +55,18 @@ body {
 
 }
 
+.navlinks .log1 {
+    color: black;
+    background: white;
+    border: #000000 solid 1px;
+    padding: 10px 30px;
+}
+.navlinks .log1:hover{
+    color: white;
+    background: blue;
+    cursor: crosshair;
+}
+
 .hero {
     position: relative;
     height: 120vh;
@@ -94,7 +106,7 @@ body {
     bottom: -50px;
     right: 120px;
     z-index: -2;
-    
+
 }
 
 .teach5 {
@@ -105,7 +117,7 @@ body {
 .teach6 {
     top: -30px;
     left: 50%;
-    transform: translateX(-50%);
+    
 }
 
 .teach7 {
@@ -119,37 +131,49 @@ body {
     top: 40%;
     right: 0px;
 }
+
 @keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
+
 .teach {
-  animation: float 4s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
 }
+
 .hero h1 {
     margin-top: 40px;
     font-size: 56px;
     font-weight: 500;
     z-index: 2;
-    
+
     line-height: 1.2;
 }
+
 .cta {
-  margin-top: 25px;
-  background: #1d4ed8;
-  color: white;
-  padding: 15px 35px;
-  border-radius: 30px;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
+    margin-top: 25px;
+    background: #1d4ed8;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .stats-section {
     padding: 100px 100px;
     background: #f5f5f5;
-   
+
 }
 
 
@@ -164,13 +188,14 @@ body {
 .stats-container {
     display: flex;
     align-items: center;
-    
+
     gap: 40px;
 }
-.stat{
+
+.stat {
     border-left: 2px solid black;
     height: 120px;
-    width:50%;
+    width: 50%;
 }
 
 
@@ -183,7 +208,7 @@ body {
 .stat p {
     margin-top: 10px;
     color: #333;
-     padding-left: 10px;
+    padding-left: 10px;
 }
 
 
@@ -191,7 +216,7 @@ body {
 
 .free {
     display: block;
-    margin: 80px auto 0;   
+    margin: 80px auto 0;
 
     padding: 15px 35px;
     background: #1d4ed8;
@@ -208,7 +233,7 @@ body {
     padding: 100px 20px;
     text-align: center;
     background: white;
-   
+
 }
 
 
@@ -223,7 +248,7 @@ body {
     font-size: 48px;
     font-weight: 500;
     margin-bottom: 50px;
-   
+
 }
 
 
@@ -241,6 +266,16 @@ body {
     background: #f5f5f5;
 }
 
+.features-section h2 {
+    font-size: 48px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.features-section .subtitle {
+    font-size: 14px;
+}
+
 .bigbox {
     max-width: 1200px;
     margin: 50px auto;
@@ -253,7 +288,7 @@ body {
 
 .tabs {
     display: flex;
-    
+
 }
 
 .tab {
@@ -263,7 +298,7 @@ body {
     background: #f2f2f2;
     font-size: 14px;
     border: #000000 1px solid;
-    
+
 }
 
 
@@ -273,28 +308,28 @@ body {
     align-items: center;
     gap: 40px;
     padding: 40px;
-    
+
 
 }
 
 
 .left {
     width: 50%;
-    
+
     border-radius: 20px;
 }
 
 .left img {
     width: 300px;
     border-radius: 10px;
-    
+
 }
 
 
 .right {
     text-align: left;
     max-width: 400px;
-    
+
 }
 
 .small {
@@ -328,23 +363,27 @@ body {
     text-decoration: none;
     color: black;
 }
+
 .research {
-    background: #badbd67b; 
-    
-   
+    background: #badbd67b;
+
+
 }
-.search{
-     max-width: 1000px;   
-    margin: 0 auto;      
+
+.search {
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 80px 20px
 }
+
 .intern {
     max-width: 1000px;
     display: flex;
     flex: 1;
-    
+
     margin-bottom: 60px;
 }
+
 .bag1 h5 {
     font-size: 14px;
     letter-spacing: 1px;
@@ -376,7 +415,7 @@ body {
 .sir {
     display: flex;
     max-width: 1000px;
-    
+
 }
 
 
@@ -384,13 +423,13 @@ body {
     flex: 1;
     border-left: 2px solid black;
     padding-left: 20px;
-    
+
 }
 
 .review {
-    padding:100px 300px;
+    padding: 100px 300px;
     max-width: 1000px;
-  
+
 }
 
 .partner {
@@ -400,19 +439,23 @@ body {
     align-items: center;
     gap: 60px;
 }
-.part img{
+
+.part img {
     width: 500px;
     border-radius: 15px;
     display: block;
 }
-.part{
+
+.part {
     width: 500px;
 }
-.part h4{
+
+.part h4 {
     font-size: 14px;
     color: #555;
     margin-bottom: 10px;
 }
+
 .part h1 {
     font-size: 40px;
     margin-bottom: 15px;
@@ -424,24 +467,129 @@ body {
     color: #444;
     margin-bottom: 25px;
 }
-.part button{
-   
+
+.part button {
+
     border: none;
     cursor: pointer;
 }
-.hit{
-    padding: 10px 30px ;
+
+.hit {
+    padding: 10px 30px;
     color: white;
     background: grey;
     border-radius: 25px;
-    
+
 }
 
-.hitagain{
-    padding: 10px 30px ;
+.hitagain {
+    padding: 10px 30px;
     color: white;
     background: #1d4ed8;
     border-radius: 25px;
+}
+
+.faq {
+    padding: 80px 20px;
+}
+
+
+.faq-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    gap: 60px;
+}
+
+
+.faq-left {
+    flex: 1;
+}
+
+.faq-left h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.faq-left p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+}
+
+.contact:hover {
+    background: grey;
+    color: #000000;
+}
+
+
+.faq-right {
+    flex: 1;
+}
+
+.faq-right:hover {
+    cursor: pointer;
+}
+
+
+.faq-box {
+    background: #f7f7f7;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-box p {
+    font-weight: 600;
+}
+
+.faq-box span {
+    font-size: 20px;
+}
+
+
+.see-more {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.see-more button {
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+
+.faq-bottom {
+    max-width: 1100px;
+    margin: 60px auto 0;
+    text-align: center;
+}
+
+.faq-bottom hr {
+    margin-bottom: 20px;
+    border: 0.5px solid #ddd;
+}
+
+.primary {
+    margin-top: 10px;
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    background: #1d4ed8;
+    color: white;
 }
 
 .updates {
@@ -486,9 +634,10 @@ body {
     object-fit: cover;
     transition: 0.3s;
 }
-.card img:hover{
+
+.card img:hover {
     transform: scale(1.1);
-    
+
 }
 
 
@@ -528,4 +677,131 @@ body {
     border: 1px solid #ccc;
     background: white;
     cursor: pointer;
+}
+
+.footer {
+    background: #e2c5e9;
+    padding: 80px 20px;
+}
+
+
+.footer-top {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.cta-left h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.cta-left p {
+    font-size: 14px;
+    color: #333;
+}
+
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+.primary {
+    background: #1d4ed8;
+    color: white;
+}
+
+.outline {
+    background: transparent;
+    border: 1px solid #999;
+}
+
+.cta-right {
+    display: flex;
+    gap: 10px;
+}
+
+
+hr {
+    max-width: 1000px;
+    margin: 40px auto;
+    border: 0.5px solid #aaa;
+}
+
+
+.footer-links {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+}
+
+.col h4 {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.col a {
+    display: block;
+    text-decoration: none;
+    color: #222;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+/* BOTTOM LOGO */
+.footer-bottom {
+    max-width: 1000px;
+    margin: 60px auto 0;
+}
+
+.footer-bottom img {
+    height: 30px;
+    width: 60px;
+}
+
+.foot-boot {
+    max-width: 1000px;
+    margin: 60px auto 0;
+}
+
+.boot {
+    margin-bottom: 30px;
+}
+
+.boot button {
+    padding: 15px;
+    background: #777;
+    color: white;
+    border-radius: 25px;
+    border: #ccc;
+    cursor: pointer;
+}
+
+.shoe img {
+    height: 60px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.socials {
+    margin-top: 20px;
+
+}
+
+.socials a {
+    color: black;
+
+}
+
+.mj {
+    display: flex;
+    justify-content: space-between;
 }
