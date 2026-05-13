@@ -52,6 +52,41 @@
 
     
 }
+.nav-links a{
+    position: relative;
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: black;
+
+    padding-bottom: 5px;
+}
+
+
+
+.nav-links a::after{
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0%;
+    height: 2px;
+
+    background: black;
+
+    transition: 0.3s;
+}
+
+
+
+.nav-links a:hover::after{
+    width: 100%;
+}
 
 .nav-icons{
     display: flex;
@@ -64,6 +99,13 @@
 
     cursor: pointer;
 }
+.nav-icons i:hover{
+ transition: 0.3s;
+    transform: translateY(-4px) scale(1.1);
+
+    color: #7c3aed;
+}
+
 
 
 /* HERO */
@@ -422,6 +464,17 @@
     justify-content: center;
     align-items: center;
 }
+.social-icons i:hover{
+    transition: 0.3s;
+    transform: translateY(-6px) scale(1.08);
+
+    background: white;
+
+    color: black;
+
+
+}
+
 
 .footer-bottom{
     text-align: center;

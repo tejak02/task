@@ -50,6 +50,41 @@
 
     
 }
+.nav-links a{
+    position: relative;
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: black;
+
+    padding-bottom: 5px;
+}
+
+
+
+.nav-links a::after{
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0%;
+    height: 2px;
+
+    background: black;
+
+    transition: 0.3s;
+}
+
+
+
+.nav-links a:hover::after{
+    width: 100%;
+}
 
 .nav-icons{
     display: flex;
@@ -62,6 +97,13 @@
 
     cursor: pointer;
 }
+.nav-icons i:hover{
+ transition: 0.3s;
+    transform: translateY(-4px) scale(1.1);
+
+    color: #7c3aed;
+}
+
 
 
 /* HERO SECTION */
@@ -207,9 +249,9 @@
 
     padding: 25px;
 
-    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    background: linear-gradient(to top, rgba(0,0,0,0.9), );
 
-    color: white;
+    color: rgb(0, 0, 0);
 
     transition: 0.5s;
 }
@@ -227,12 +269,12 @@
 .sneaker-info p{
     font-size: 15px;
 
-    color: #d1d5db;
+    color: #000000;
 }
 .sneaker-info button{
     padding: 12px 22px;
 
-    border: none;
+    border: 1px solid black;
 
     border-radius: 50px;
 
@@ -290,7 +332,7 @@
 }
 
 
-/* LINKS */
+
 
 .footer-links h3,
 .footer-social h3{
@@ -344,9 +386,16 @@
 }
 
 .social-icons i:hover{
+    transition: 0.3s;
+    transform: translateY(-6px) scale(1.08);
+
     background: white;
+
     color: black;
+
+
 }
+
 
 
 /* FOOTER BOTTOM */
@@ -358,57 +407,3 @@
 }
 
 
-/* RESPONSIVE */
-
-@media(max-width:1200px){
-
-    .sneaker-container{
-        grid-template-columns: repeat(3,1fr);
-    }
-
-}
-
-
-@media(max-width:992px){
-
-    .sneaker-container,
-    .footer-top{
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .hero-content h1{
-        font-size: 60px;
-
-        line-height: 70px;
-    }
-
-}
-
-
-@media(max-width:768px){
-
-    .navbar{
-        flex-direction: column;
-
-        gap: 20px;
-    }
-
-    .nav-links{
-        flex-wrap: wrap;
-
-        justify-content: center;
-    }
-
-    .sneaker-container,
-    .footer-top{
-        grid-template-columns: 1fr;
-    }
-
-    .hero-content h1,
-    .section-title h2{
-        font-size: 40px;
-
-        line-height: 50px;
-    }
-
-}

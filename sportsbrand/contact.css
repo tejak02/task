@@ -51,6 +51,41 @@
 
     
 }
+.nav-links a{
+    position: relative;
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: black;
+
+    padding-bottom: 5px;
+}
+
+
+
+.nav-links a::after{
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0%;
+    height: 2px;
+
+    background: black;
+
+    transition: 0.3s;
+}
+
+
+
+.nav-links a:hover::after{
+    width: 100%;
+}
 
 .nav-icons{
     display: flex;
@@ -62,6 +97,12 @@
     font-size: 18px;
 
     cursor: pointer;
+}
+.nav-icons i:hover{
+ transition: 0.3s;
+    transform: translateY(-4px) scale(1.1);
+
+    color: #7c3aed;
 }
 
 
@@ -224,6 +265,17 @@
 
     cursor: pointer;
 }
+.social-icons i:hover{
+    transition: 0.3s;
+    transform: translateY(-6px) scale(1.08);
+
+    background: white;
+
+    color: black;
+    border: #000000 solid 1px;
+
+}
+
 
 
 /* FORM */
@@ -518,49 +570,3 @@
 }
 
 
-/* RESPONSIVE */
-
-@media(max-width:992px){
-
-    .contact-section,
-    .review-container,
-    .faq-container,
-    .footer-top{
-        grid-template-columns: 1fr;
-    }
-
-    .hero-content h1{
-        font-size: 60px;
-
-        line-height: 70px;
-    }
-
-}
-
-
-@media(max-width:768px){
-
-    .navbar{
-        flex-direction: column;
-
-        gap: 20px;
-    }
-
-    .nav-links{
-        flex-wrap: wrap;
-
-        justify-content: center;
-    }
-
-    .hero-content h1,
-    .contact-info h2{
-        font-size: 40px;
-
-        line-height: 50px;
-    }
-
-    .section-title h2{
-        font-size: 35px;
-    }
-
-}
