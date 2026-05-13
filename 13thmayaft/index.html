@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+       
+    }
+
+    body {
+        background: #02030d;
+        
+    }
+
+    .future-section {
+        padding: 80px 5%;
+        color: white;
+    }
+
+    .future-section h2 {
+        text-align: center;
+        font-size: 60px;
+        font-weight: 300;
+        margin-bottom: 70px;
+    }
+
+    .future-container {
+        display: flex;
+        gap: 15px;
+
+    }
+ 
+    .future-card {
+        width: 300px;
+        height: 350px;
+        overflow: hidden;
+        position: relative;
+
+    }
+
+    .future-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .future-content {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+
+        padding: 25px;
+    }
+
+    .future-card::after{
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 60%;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.95),
+        transparent
+    );
+
+    opacity: 0;
+    transition: 0.5s;
+}
+.future-card:hover::after {
+    opacity: 1;
+}
+
+    .future-content p {
+
+        line-height: 1.4;
+
+    }
+
+
+
+    .hide{
+         position: absolute;
+
+    left: 0;
+    bottom: -100%;
+     transition: 0.5s;
+    }
+    .hide p{
+        color: orange;
+    }
+    .future-card:hover .hide{
+        bottom: 0;
+
+       
+    }
+    .view-all{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.view-all a{
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    
+}
+.view-all a:hover{
+    color: orange;
+   letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.future-card:hover{
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+
+</style>
+
+<body>
+    <section class="future-section">
+
+        <h2>Shaping the Future with AI at the Core</h2>
+
+        <div class="future-container">
+
+            <div class="future-card">
+                <img src="https://i.pinimg.com/736x/76/73/8a/76738a3cce94f472c46f3d83aa739e63.jpg" alt="">
+
+                <div class="future-content">
+                    <p>
+                        Agentic AI in Manufacturing: The 5–Stage Blueprint for an Autonomous Industry
+                    </p>
+                    <div class="hide">
+                        <p>
+                            view all
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="future-card">
+                <img src="https://i.pinimg.com/736x/17/4f/cb/174fcba56e292f6ed97658096b407b44.jpg" alt="">
+
+                <div class="future-content">
+                    <p>
+                        Professional Services in 2026: 5 Trends Powering the Next Frontier
+                    </p>
+                    <div class="hide">
+                        <p>
+                            view all
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="future-card">
+                <img src="https://i.pinimg.com/736x/8a/f2/dd/8af2dddeac28709607bd72fe6ec569ea.jpg" alt="">
+
+                <div class="future-content">
+                    <p>
+                        The Future of the Hi-Tech Industry: 6 Trends That Will Define 2026
+                    </p>
+                    <div class="hide">
+                        <p>
+                            view all
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="future-card">
+                <img src="https://i.pinimg.com/736x/af/c1/7b/afc17ba4d3fb65648123345a105b0281.jpg" alt="">
+
+                <div class="future-content">
+                    <p>
+                        How Gen AI and Agentic AI Are Transforming the London Market Insurance Lifecycle
+                    </p>
+                    <div class="hide">
+                        <p>
+                            view all
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="future-card">
+                <img src="https://i.pinimg.com/1200x/f5/f2/2f/f5f22f73a232f35511d7f92b98323ccb.jpg" alt="">
+
+                <div class="future-content">
+                    <p>
+                        Agentic AI in CPG: Turning the Back Office into the Frontline
+                    </p>
+                    <div class="hide">
+                        <p>
+                            view all
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="view-all">
+            <a href="">View All ↗</a>
+        </div>
+
+    </section>
+</body>
+
+</html>
