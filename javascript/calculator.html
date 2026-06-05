@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+
+        background-color: #fffefe;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        background: rgb(160, 160, 160);
+        padding: 25px;
+        border-radius: 10px;
+        width: 400px;
+
+
+    }
+     input{
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        } 
+
+        button{
+            width: 100%;
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover{
+            transition: 0.3s;
+            background: red;
+        }
+</style>
+
+<body>
+    <div class="container">
+        <h2>Student Marks Calculator</h2>
+
+        <input type="text" id="name" placeholder="Student Name">
+
+        <input type="number" id="sub1" placeholder="maths marks">
+
+        <input type="number" id="sub2" placeholder="physics marks">
+
+        <button onclick="calculate()">Calculate</button>
+
+        <div id="result"></div>
+    </div>
+    <script>
+        function calculate() {
+            let name = document.getElementById("name").value;
+
+            let sub1 = Number(document.getElementById("sub1").value);
+
+            let sub2 = Number(document.getElementById("sub2").value);
+
+
+            let total = sub1 + sub2;
+            let average = total / 2;
+
+
+            let bonusMarks = total;
+            bonusMarks += 5;
+
+            let greaterCheck = sub1 > sub2;
+            let equalCheck = sub1 == sub2;
+
+            let bothPass = sub1 > 35 && sub2 > 35;
+            let oneExcellent = sub1 > 90 || sub2 > 90;
+
+
+            let increasedSub1 = sub1;
+            increasedSub1++;
+
+            let decreasedSub2 = sub2;
+            decreasedSub2--;
+
+            let result = average >= 35 ? "Pass" : "Fail";
+
+
+            let grade;
+
+            if (average >= 90) {
+                grade = "A Grade";
+            }
+            else if (average >= 75) {
+                grade = "B Grade";
+            }
+            else if (average >= 60) {
+                grade = "C Grade";
+            }
+            else if (average >= 35) {
+                grade = "D Grade";
+            }
+            else {
+                grade = "Fail";
+            }
+
+
+
+            document.getElementById("result").innerHTML =
+                "<b> Student: </b> " + name + "<br>" +
+
+                "<b>Total Marks: <b>" + total + "<br>" +
+
+                "Average Marks: " + average + "<br>" +
+
+                "Total After Bonus (+5): " + bonusMarks + "<br>" +
+
+                "Subject 1 > Subject 2: " + greaterCheck + "<br>" +
+
+                "Subject 1 == Subject 2: " + equalCheck + "<br>" +
+
+                "Both Subjects Above 35: " + bothPass + "<br>" +
+
+                "At Least One Subject Above 90: " + oneExcellent + "<br>" +
+
+                "Subject 1 After ++ : " + increasedSub1 + "<br>" +
+
+                "Subject 2 After -- : " + decreasedSub2 + "<br>" +
+
+                "<b>Result: </b>" + result + "<br>" +
+
+                "<b>Grade:</b> " + grade;
+        }
+    </script>
+</body>
+
+</html>
