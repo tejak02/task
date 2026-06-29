@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizza Builder</title>
+
+<link rel="stylesheet" href="pizza.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="builder">
+
+        <h1> BUILD YOUR SMART PIZZA</h1>
+
+        <label>CRUST</label>
+
+        <select id="crust">
+            <option value="8"> Thin ($8)</option>
+            <option value="10"> Regular ($10)</option>
+            <option value="12"> Stuffed ($12)</option>
+        </select>
+
+        <label>SIZE</label>
+
+        <div class="sizes">
+
+            <button class="size active" data-price="0">Small</button>
+
+            <button class="size" data-price="2">Medium</button>
+
+            <button class="size" data-price="4">Large</button>
+
+        </div>
+
+        <label>TOPPINGS</label>
+
+        <div class="toppings">
+
+            <label><input type="checkbox" value="1"> Cheese</label>
+
+            <label><input type="checkbox" value="1.5"> Mushrooms</label>
+
+            <label><input type="checkbox" value="1"> Peppers</label>
+
+            <label><input type="checkbox" value="2"> Pepperoni</label>
+
+            <label><input type="checkbox" value="2.5"> Chicken</label>
+
+            <label><input type="checkbox" value="2"> Olives</label>
+
+        </div>
+
+        <label>Coupon</label>
+
+        <input type="text" id="coupon" placeholder="SAVE10">
+
+        <button id="orderBtn">PLACE ORDER</button>
+
+    </div>
+
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="receipt">
+
+        <h1> YOUR RECEIPT</h1>
+
+        <div class="bill">
+
+            <h2 id="pizzaName">SMALL THIN CRUST PIZZA</h2>
+
+            <hr>
+
+            <p>Base :
+                <span id="base">$8.00</span>
+            </p>
+
+            <p>Toppings :
+                <span id="top">$0.00</span>
+            </p>
+
+            <p>Subtotal :
+                <span id="sub">$8.00</span>
+            </p>
+
+            <p>Discount :
+                <span id="discount">0%</span>
+            </p>
+
+            <hr>
+
+            <h1>
+                FINAL TOTAL
+                <span id="total">$8.00</span>
+            </h1>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="pizza.js"></script>
+
+</body>
+</html>
