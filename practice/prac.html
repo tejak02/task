@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <input type="number" id="numInput" placeholder="Enter a number">
+    <button onclick="runSquare()">Find Square</button>
+
+    <div id="output"></div>
+
+
+    <script>
+
+
+        function findSquare(number) {
+            if (number === "") {
+                return "Please enter a number!";
+            }
+
+            return "Square of " + number + " is " + (number * number);
+        }
+
+
+        function runSquare() {
+            let inputValue = document.getElementById("numInput").value;
+            let result = findSquare(inputValue);
+            document.getElementById("output").innerText = result;
+        }
+
+    </script>
+
+
+
+
+<!-- Default Parameters affecting UI -->
+
+
+    <div id="colorBox">The Box</div>
+
+    <button onclick="changeBoxColor('#ef4444')">Red</button>
+    <button onclick="changeBoxColor('#3b82f6')">Blue</button>
+    <button onclick="changeBoxColor()">Run Default</button>
+
+
+    <script>
+
+        function changeBoxColor(color = '#f1f5f9') {
+            const box = document.getElementById('colorBox');
+            box.style.backgroundColor = color;
+
+            if (color === '#f1f5f9') {
+                box.innerText = "Default";
+                box.style.color = "#000";
+            } else {
+                box.innerText = "Changed!";
+                box.style.color = "#fff";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

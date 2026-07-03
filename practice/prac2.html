@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-commerce Discount Calculator</title>
+</head>
+<body>
+
+
+    <input type="number" id="priceInput" placeholder="Enter Product Price"><br><br>
+
+    <input type="number" id="discountInput" placeholder="Enter Discount %"><br><br>
+
+    <button onclick="runDiscount()">Calculate Final Price</button>
+
+    <div id="output"></div>
+
+    
+    <script>
+
+  
+    function calculateDiscount(price, discount) {
+
+        if (price == "" || discount == "") {
+            return "Please enter both price and discount!";
+        }
+
+        let discountAmount = (price * discount) / 100;
+        let finalPrice = price - discountAmount;
+
+        return "Original Price: ₹" + price +
+               "<br>Discount: " + discount + "%" +
+               "<br>Discount Amount: ₹" + discountAmount +
+               "<br><b>Final Price: ₹" + finalPrice + "</b>";
+    }
+
+   
+    function runDiscount() {
+        let price = document.getElementById("priceInput").value;
+        let discount = document.getElementById("discountInput").value;
+
+        let result = calculateDiscount(price, discount);
+
+        document.getElementById("output").innerHTML = result;
+    }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time-Based Greeting</title>
+</head>
+<body>
+
+   
+    <button onclick="runGreeting()">Check Greeting</button>
+
+    <div id="output"></div>
+
+    <script>
+
+    
+    function getGreeting(hour) {
+
+        if (hour < 12) {
+            return " Good Morning!";
+        }
+        else if (hour < 18) {
+            return " Good Afternoon!";
+        }
+        else {
+            return " Good Evening!";
+        }
+    }
+
+   
+    function runGreeting() {
+
+        let currentHour = new Date().getHours();
+
+        let result = getGreeting(currentHour);
+
+        document.getElementById("output").innerHTML =
+            "Current Hour: " + currentHour + "<br>" + result;
+    }
+
+    </script>
+
+</body>
+</html>

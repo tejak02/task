@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Truncator</title>
+</head>
+<body>
+
+
+    <textarea id="textInput" placeholder="Enter your text"></textarea>
+    <br><br>
+
+    <input type="number" id="lengthInput" placeholder="Enter Max Length">
+    <br><br>
+
+    <button onclick="runTruncate()">Truncate Text</button>
+
+    <div id="output"></div>
+
+    <script>
+
+
+    function truncateText(text, maxLength) {
+
+        if (text == "" || maxLength == "") {
+            return "Please enter both text and maximum length!";
+        }
+
+        if (text.length > maxLength) {
+            return text.slice(0, maxLength) + "...";
+        } else {
+            return text;
+        }
+    }
+
+  
+    function runTruncate() {
+
+        let text = document.getElementById("textInput").value;
+        let maxLength = document.getElementById("lengthInput").value;
+
+        let result = truncateText(text, maxLength);
+
+        document.getElementById("output").innerText = result;
+    }
+
+    </script>
+
+</body>
+</html>
